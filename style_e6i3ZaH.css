@@ -1,0 +1,702 @@
+/* import open sans font  */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+@font-face {
+    font-family: 'NotoSansCarian';
+    src: url("https://gitlab.com/rlyehlab/flisol-landing/-/raw/eventol/public/assets/NotoSansCarian-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.navbar, .navbar.navbar-light {
+    font-size: .5em !important;
+}
+
+a:focus {
+    outline: 3px solid #f52323 !important;
+}
+
+footer a {
+    color: #eae2d9 !important;
+    font-size: .6em;
+    margin-left: 1em;
+}
+
+body {
+    background: #282626;
+    font-size: 2em;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+/*
+    ## remember99, amiga de flisol <3
+
+    img.remember99 {
+    width: 2.3em;
+    position: absolute;
+    top: -.4em;
+    right: 0;
+
+*/
+
+.header {
+    background: #eae2d9;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: .8em 1em;
+}
+
+.header h1 {
+    display: none;
+}
+
+img.flisol-ba-logo {
+    width: 5em;
+    margin: 1em 0; 
+}
+
+.header h2 {
+    text-align: center;
+    font-size: .7em;
+    background: #282626;
+    color: #eae2d9;
+    padding: .3em 1.4em;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.navbar {
+    background-color: #282626 !important;
+    /* bootstrap class */
+}
+
+.navbarx {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 24em;
+}
+
+.navbarx:focus {
+    border: 1px solid #EAE2D9;
+    border-radius: 4px;
+}
+
+.btnx {
+    font-size: .5em;
+    text-decoration: none;
+    border-radius: 4px;
+    padding: .5em 1em;
+    margin: .6em;
+}
+
+.btnx-navbarx , .btnx-navbarx-inv:hover {
+    background: #f57423;
+    color: #18171a;
+}
+
+.btnx-navbarx:hover, .btnx-navbarx-inv {
+    background: #18171a;
+    color: #f57423;
+}
+
+.btnx-discord {
+    background: #eae2d9;
+    color: #7289da;
+    font-size: .8em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 13em;
+    margin: 1.7em auto;
+}
+
+.btnx-discord:hover {
+    background: #7289da;
+    color: #eae2d9;
+}
+
+.btnx-discord:hover img {
+    filter: brightness(0) saturate(100%) invert(99%) sepia(99%) saturate(3%) hue-rotate(359deg) contrast(100%);
+}
+
+.btnx-transparent {
+    background: transparent;
+    border: 2px solid #18171a;
+    color: #18171a;
+}
+
+.btnx-sign:hover {
+    background: #f57423;
+    color: #FFF;
+}
+
+.btnx-center {
+    text-align: center;
+    margin: .5em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+.covid-banner {
+    background: #c5c4c3;
+    background-image: url('https://gitlab.com/rlyehlab/flisol-landing/-/raw/eventol/public/assets/img/covid-draw.png');
+    background-repeat: no-repeat;
+    background-size: unset;
+    background-position: 2em -2em;
+    max-width: 60em;
+    min-height: 10em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+*/
+
+.banner-text {
+    max-width: 15em;
+    max-height: 7em;
+    padding: 1em;
+    margin: 1em 3em;
+    background: #282626;
+    opacity: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-text h2 {
+    color: #eae2d9;
+    font-size: .9em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.link-art {
+    font-size: .4em;
+    color: #eae2d9;
+    text-decoration: none;
+    margin-left: 2em;
+}
+
+.banner-img {
+    max-width: 25em;
+    margin: 1em 3em;
+}
+
+.banner-img img {
+    width: 5em;
+}
+
+.intro {
+    max-width: 23em;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: .5em;
+    padding: 1em;
+}
+
+.intro p {
+    color: #eae2d9;
+    font-size: .6em;
+    text-align: left;
+}
+
+.about {
+    background: #eae2d9;
+    text-align: center;
+    margin: .5em 0;
+    padding: .5em;
+}
+
+.about p {
+    font-size: .6em;
+    text-align: left;
+    padding: 0 1em;
+}
+
+.about ul {
+    font-size: .6em;
+    max-width: 40em;
+    margin-left: .5em;
+    text-align: left;
+}
+
+.mapa {
+    color: #eae2d9;
+    font-size: .5em;
+    text-align: center;
+}
+
+/* fix imgs bottom  */
+
+#after-office {
+    background: #f57423;
+    color: #282626;
+}
+
+#speakers {
+    background: #eae2d9;
+    color: #282626;
+}
+
+.cfc, .after-office {
+    padding: 1em;
+}
+
+.cfc {
+    text-align: center;
+}
+
+.cfc p, .after-office p {
+    font-size: .5em;
+}
+
+.wrapp-section {
+    display: flex;
+    justify-content: center;
+}
+
+.galpon-bar {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.galpon-bar img {
+    margin: .5em;
+}
+
+/* fix imgs bottom end  */
+
+.tracks img {
+    margin-top: 2em;
+}
+
+.transmi-wrap {
+    background: #282626;
+    text-align: center;
+    margin: 2em 0;
+}
+
+.separator {
+    background: #f57423;
+    color: #282626;
+    padding: 1.2em 0;
+}
+
+.tracks h3 {
+    font-size: .7em;
+    background: #eae2d9;
+    padding: 1.2em 0;
+}
+
+.tracks h4 {
+    font-size: .5em;
+    padding-bottom: 2em;
+    color: #6a6a6a;
+    text-align: center;
+}
+
+.tracks h2 {
+    margin: 1em auto;
+    font-size: .6em;
+    text-align: center;
+    background: #282626;
+    color: #eae2d9;
+    padding: .6em 2em;
+    max-width: 6em;
+    border-radius: 4px;
+}
+
+table {
+    margin: 0 auto;
+    font-size: .5em;
+    margin-bottom: 1em;
+}
+
+table a,
+table a:visited {
+    color: #eae2d9;
+    text-decoration: none;
+    background: #f57423;
+    padding: .3em .4em;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+table.tabla-track-negro a,
+table.tabla-track-negro a:visited {
+    background: #18171a;
+}
+
+table.tabla-track-negro a:hover {
+    color: #f57423;
+}
+
+/* Tabla */
+
+table.tabla-track-rojo thead {
+    background-color: #f57423;
+    border-bottom: 3px solid #282626;
+}
+
+table.tabla-track-negro thead {
+    background: #282626;
+    border-bottom: 3px solid #282626;
+}
+
+td:nth-child(1),
+td:nth-child(3) {  
+    text-align: center;
+}
+
+table.minimalistBlack {
+    border: 3px solid #282626;
+    background-color: #EAE2D9;
+    width: 90%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+table.minimalistBlack td,
+table.minimalistBlack th {
+    border: 1px solid #282626;
+    padding: 5px 4px;
+}
+
+table.minimalistBlack tbody td {
+    font-size: 13px;
+}
+
+table.minimalistBlack thead th {
+    font-size: 15px;
+    font-weight: bold;
+    color: #EAE2D9;
+    text-align: center;
+}
+
+table.minimalistBlack tfoot td {
+    font-size: 14px;
+}
+
+#cronograma {
+    padding-bottom: .1em;
+    background: #EAE2D9;
+}
+
+/* videos en vivo */
+
+.videos-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: .9em;
+}
+
+#transmisiones h2 {
+    margin: 1em auto;
+    font-size: .6em;
+    text-align: center;
+    background: #eae2d9;
+    color: #282626;
+    padding: .6em 2em;
+    max-width: 8em;
+    border-radius: 4px;
+}
+
+/* #transmisiones p {
+    font-size: .6em;
+    text-align: center;
+    color: #eae2d9;
+} */
+
+.link-video-wrapper {
+    width: 10em;
+    margin: .6em;
+}
+
+.link-video-wrapper a {
+    text-decoration: none;
+}
+
+.youtube-track-link {
+    min-height: 5em;
+    min-width: 10em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.youtube {
+    background: #f57423;
+}
+
+.twitch {
+    background: #33174b;
+}
+
+.track-rojo {
+    background: #f57423;
+}
+
+.track-negro {
+    background: #18171a;
+}
+
+.youtube-track-link i {
+    color: #eae2d9;
+    opacity: 0.8;
+}
+
+.title-video {
+    font-size: .4em;
+    text-align: center;
+    color: #eae2d9;
+    text-transform: uppercase;
+}
+
+.discord-banner {
+    max-width: 30em;
+    max-height: 10em;
+    font-size: .7em;
+    margin: 2em auto;
+    text-align: center;
+    background: transparent;
+    color: #EAE2D9;
+    border: .3em solid #EAE2D9;
+    border-radius: 10em;
+    padding: 1em 2em 0em 2em;
+}
+
+.discord-banner img {
+    width: 2em;
+    margin-left: .6em;
+}
+
+.discord-banner h4 {
+    font-size: .9em;
+    text-transform: uppercase;
+}
+
+#comunidades p {
+    text-align: center;
+    background: #EAE2D9;
+    color: #18171a;
+    font-size: .7em;
+    font-weight: bold;
+    max-width: 17em;
+    margin: 1em auto 0 auto;
+    padding: .5em 3em;
+    border-radius: 4px;
+}
+
+.logos-com-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.logos-com-wrapper img {
+    max-width: 3em;
+    margin: .9em;
+}
+
+/* Banner instalaciones */
+
+#install {
+    background: #6a6a6a;
+    max-width: 60em;
+    min-height: 10em;
+    padding-top: .5em;
+}
+
+.title-videos {
+    font-size: .6em;
+    text-align: center;
+    color: #eae2d9;
+}
+
+#install a {
+    text-decoration: none;
+    color: #18171a;
+}
+
+
+.installers-title {
+    background-image: url('https://gitlab.com/rlyehlab/flisol-landing/-/raw/eventol/public/assets/img/terminal-dd.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 77em;
+    font-size: .3em;
+    color: #eae2d9;
+    padding: 7em 2em 3em 2em;
+    margin: 3em auto;
+}
+
+.installers-title p {
+    font-size: 1.4em;
+    font-family: 'NotoSansCarian', 'Courier New', Courier, monospace;
+    color: #ec93d3;
+}
+
+.install-banner {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.video-box {
+    width: 12em;
+    margin: .5em;
+}
+
+.video-box p {
+    font-size: .5em;
+    background: #18171a;
+    padding: .5em 2em;
+    color: #c5c4c3;
+}
+
+/* Seguinos en redes */
+
+.follow-us {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 4em;
+}
+
+.follow-us i {
+    color: #eae2d9;
+    margin: 0 1em;
+}
+
+.follow-us img {
+    filter: brightness(0) saturate(100%) invert(99%) sepia(99%) saturate(3%) hue-rotate(359deg) contrast(100%);
+    margin: 0 1.5em;
+    width: 1.2em;
+}
+
+p.follow {
+    font-size: .4em;
+    color: #eae2d9;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+/* media query para mobile  */
+
+@media screen and (max-width: 424px) {
+    .covid-disclaimer p {
+        padding: .5em 1.5em;
+        text-align: left;
+    }
+
+    .youtube-track-link {
+        min-height: 3em; 
+        min-width: unset; 
+    }
+
+    .link-video-wrapper {
+        margin: .4em;
+        min-width: unset;
+    }
+
+    .installers-title {
+        background-image: url("https://gitlab.com/rlyehlab/flisol-landing/-/raw/eventol/public/assets/img/terminal-dd-mobile-xs.png");
+        padding: 39% 8% 3%;
+    }
+
+    .installers-title h2 {
+        font-size: 1.4em;
+    }
+
+    #comunidades p {
+        margin: 1em auto 0 auto;
+        font-size: .6em;
+        padding: .3em 1.2em;
+    }
+
+    .follow-us i {
+        margin: .6em;
+    }
+
+    .banner-text {
+        max-width: unset;
+        max-height: unset;
+        font-size: .7em;
+    }   
+
+    .discord-banner {
+        max-height: unset;
+        border: none;
+        margin: 1em auto .3em auto;
+    }
+
+
+    p.follow:last-of-type {
+        margin-bottom: 5em;
+    }
+}
+
+@media screen and (max-width: 606px) {
+    .header h2 {
+        margin-top: 2em;
+    }
+}
+
+@media screen and (min-width: 425px) and (max-width: 768px) {
+
+    .banner-text h2 {
+        font-size: .6em;
+    }
+
+    .youtube-track-link {
+        min-height: 3em;
+        min-width: unset;
+        max-width: 5em;    
+    }
+
+    .link-video-wrapper {
+        width: 5em;
+    }
+
+    .covid-disclaimer p {
+        text-align: left;
+        padding: 1em 3em;
+    }
+
+    .installers-title {
+        background-image: url("https://gitlab.com/rlyehlab/flisol-landing/-/raw/eventol/public/assets/img/terminal-dd-mobile.png");
+        padding: 20% 4% 3%;
+    }
+    .installers-title h2 {
+        font-size: 1.4em;
+    }
+
+    .discord-banner {
+        border: none;
+        max-height: 10em;
+    }
+
+    .follow-us {
+        margin: 1em 1.4em;
+    }
+
+}
+
+/* eventol */
+
+.container-fluid {
+    padding: 0 !important;
+}
+
+/* eventol */

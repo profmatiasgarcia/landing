@@ -1,0 +1,257 @@
+{% extends "base.html" %}
+{% load render_bundle from webpack_loader %}
+{% load staticfiles %}
+{% load i18n %}
+{% load l10n %}
+{% load cropping %}
+{% load filters %}
+{% block other-head %}
+    
+    {% if event is not None and event.css_custom %}
+        <link rel="stylesheet" type="text/css" media="all" href="{{ event.css_custom.url }}"/>
+        <meta property="og:image" content="https://flisol.info/FLISOL2022/Argentina/CABA?action=AttachFile&do=get&target=thumb.png"/>
+        <meta name="twitter:title" content="FLISoL CABA 2023">
+        <meta name="twitter:description" content="Festival de Instalación de Software Libre">
+        <meta name="twitter:image" content="https://flisol.info/FLISOL2022/Argentina/CABA?action=AttachFile&do=get&target=thumb.png" >
+        <meta name="twitter:card" content="summary_large_image">
+    {% endif %}
+
+{% endblock %}
+{% block content-size %}col-12 m-0 p-0{% endblock %}
+{% block content %}
+    <nav>
+        <div class="wrapper">
+            <div class="header">
+                <h1>Flisol CABA 2023 - 22/04/23</h1>
+                <h2>¡Nos vemos en 2023!</h2>
+                <img class="flisol-ba-logo" src="https://gitlab.com/rlyehlab/flisol-landing/-/raw/eventol/public/assets/img/logo-flisol-naranja-completo.png" alt="logo flisol 2021">
+            </div>
+            <!-- <div class="intro">
+                <p>
+                    Bienvenidas y bienvenidos a la edición número 18 del Festival Latinoamericano de Instalación 
+                    de Software Libre, más conocido como FLISoL.
+                </p>
+                <p>
+                    Este año volvemos a la presencialidad y pasaremos una jornada compartiendo cultura y 
+                    software libre como hemos hecho en todas las ediciones anteriores.
+                </p>
+            </div> -->
+            <div class="navbarx">
+                <a class="btnx btnx-navbarx" href="#acercade">#ACERCA DE</a>
+                <!-- <a class="btnx btnx-navbarx" href="#donde">#DONDE</a> -->
+                <!-- <a class="btnx btnx-navbarx" href="https://eventol.flisol.org.ar/events/flisol-caba-22/registration" title="registrate en el evento">#REGISTRARSE</a> -->
+                <a class="btnx btnx-navbarx" href="#install">#INSTALAR</a>
+                <!-- <a class="btnx btnx-navbarx" href="https://eventol.flisol.org.ar/events/flisol-caba-22/schedule" title="registrate en el evento">#CRONOGRAMA</a> -->
+                <a class="btnx btnx-navbarx" href="#comunidades">#COMUNIDADES</a>
+                <a class="btnx btnx-navbarx" href="https://cafecito.app/flisolcaba">#DONACIONES</a>
+                <!-- <a class="btnx btnx-navbarx" href="#after-office">#AFTER</a> -->
+                <a class="btnx btnx-navbarx" href="#links">#LINKS</a>            
+            </div>
+        </div>
+    </nav>
+    <main>    
+        <section id="acercade">
+            <div class="about">
+                <p>
+                    El <strong>FLISoL</strong> es el evento de difusión de Software Libre más grande del mundo, 
+                    se desarrolla en diferentes sedes a lo largo y ancho de toda Latinoamerica, el Caribe y 
+                    algunas ciudades de España desde el año 2005 y desde el 2008 se adoptó su realización el 
+                    4to Sábado de abril de cada año.
+                </p>                
+                <p>
+                    En cada país, las comunidades, asociaciones y lugs se organizan y cada colaborador presta 
+                    su tiempo, conocimiento y ganas para producir un evento libre, gratuito e inclusivo para 
+                    promover el uso del software libre, dando a conocer al público en general su filosofía, 
+                    alcances, avances y desarrollo.
+                </p>
+                <p>
+                    En el mismo se realizan fundamentalmente dos tipos de actividades:            
+                    <ul>
+                        <li>Instalación de Software libre, de manera completamente legal y gratuita, en computadoras que llevan los asistentes.</li>
+                        <li>Charlas, ponencias y talleres sobre temáticas locales, nacionales y latinoamericanas vinculadas con el Software y la Cultura Libre, a cargo de profesionales del área IT.</li>                    
+                    </ul>
+                </p>
+            </div>
+        </section>
+        <!-- <section id="donde">
+            <div class="mapa">
+                <p>UTN-INSPT <br> Av. Triunvirato 3174 - CABA <br> Sab. 23 de Abril 10hs a 18hs</p>
+                <iframe style="pointer-events:none; border:0;" width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=-58.4679937362671%2C-34.58500315992031%2C-58.465311527252204%2C-34.58342647419214&amp;layer=mapnik&amp;marker=-34.58421482079543%2C-58.466652631759644"
+                    style="border: 1px solid black">
+                </iframe>            
+            </div>
+            <div class="btnx-center">
+                <a class="btnx btnx-navbarx" href="https://www.openstreetmap.org/?mlat=-34.58421&amp;mlon=-58.46665#map=19/-34.58421/-58.46665&amp;layers=N">
+                    Ver mapa más grande
+                </a>
+            </div>        
+        </section> -->
+        <section id="install">
+            <div class="installers-title">
+                <p>
+                    FLISoL nació con la idea de difundir el Software Libre, su objetivo principal 
+                    era ayudar a instalar, configurar y utilizar las distribuciones GNU Linux, 
+                    recordemos que en 2005 quizás los métodos de instalación no eran tan sencillos 
+                    como actualmente y la proliferación y crecimiento de los lugs (linux user 
+                    groups) nos llevó a muchos a organizarse para realizar diferentes eventos para 
+                    poder brindar su ayuda.<br><br>Puedes registrate y venir con tu PC o Notebook 
+                    y alguien del staff de instaladores te ayudará y asistirá para que puedas 
+                    instalar una distribución GNU/Linux que mejor se adapte a tu equipo.
+                </p>
+            </div>
+            <p class="title-videos">Te dejamos algunos video tutoriales de instalaciones de la edición 2021.</p>
+            <div class="install-banner">            
+                <div class="video-box">
+                    <p>Ubuntu 20.04 (MATE)</p>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/gmon5f4A9eg"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-box">
+                    <p>Linux Mint 20.1(Cinnamon)</p>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/gBqasAoS7OA"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-box">
+                    <p>ZorinOs 20.1 (Gnome)</p>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/sk6IiARVGvY"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-box">
+                    <p>Linux MX 19.3 (Xfce)</p>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/XwU2UlwZE1U"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>                
+                </div>
+                <div class="video-box">
+                    <p>KaOs GNU/Linux (KDE)</p>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/yzn1DNkSmSQ"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>                
+                </div>
+                <div class="video-box">
+                    <p>Solus GNU/Linux (Budgie)</p>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/cre30JaeCO0"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>                
+                </div>
+                <div class="video-box">
+                    <p>Mabox GNU/Linux (OpenBox)</p>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/cV9cane8zmA"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>                
+                </div>
+                <div class="video-box">
+                    <p>Ubuntu 21.04 (Budgie)</p>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/MfNtwyktpE8"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>                
+                </div>
+                <div class="video-box">
+                    <p>Ubuntu 21.04 (Gnome)</p>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/eyGvDjkmXj4"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>                
+                </div>
+            </div>
+        </section>
+        <section id="comunidades">
+            <p>Comunidades amigas</p>
+            <div class="logos-com-wrapper">
+                <a href="http://inspt.utn.edu.ar/" target="_blank">
+                    <img src="https://gitlab.com/rlyehlab/flisol-landing/-/raw/eventol/public/assets/img/comunidades/inspt-unt.png" alt="utn">
+                </a>
+                <a href="https://sysarmy.com/es/" target="_blank">
+                    <img src="https://gitlab.com/rlyehlab/flisol-landing/-/raw/eventol/public/assets/img/comunidades/sysarmy.png" alt="sysarmy">
+                </a>
+                <a href="https://lasdesistemas.org/" target="_blank">
+                    <img src="https://gitlab.com/rlyehlab/flisol-landing/-/raw/eventol/public/assets/img/comunidades/LDS_color.png" alt="las de sistemas">
+                </a>
+                <a href="https://www.gcoop.coop" target="_blank">
+                    <img src="https://gitlab.com/rlyehlab/flisol-landing/-/raw/eventol/public/assets/img/comunidades/gcoop.png" alt="gcoop">
+                </a>
+                <a href="https://adicra.org.ar/" target="_blank">
+                    <img src="https://gitlab.com/rlyehlab/flisol-landing/-/raw/eventol/public/assets/img/comunidades/adicra.png" alt="adicra">
+                </a>
+                <a href="https://openhardwarela.com/" target="_blank">
+                    <img src="https://gitlab.com/rlyehlab/flisol-landing/-/raw/eventol/public/assets/img/comunidades/ohla.png" alt="open hardware latino america">
+                </a>
+                <a href="https://chicasentecnologia.org/" target="_blank">
+                    <img src="https://chicasentecnologia.org/wp-content/uploads/chicas_registrado.svg" alt="chicas en tecnología"> 
+                </a>
+                <a href="https://wiki.rlab.be" target="_blank">
+                    <img src="https://gitlab.com/rlyehlab/flisol-landing/-/raw/eventol/public/assets/img/comunidades/rlab.png" alt="rlab">
+                </a>
+            </div>
+        </section>
+        <!-- <section id="after-office">
+            <div class="wrapp-section">
+                <div class="after-office">
+                    <p>
+                        <strong>FLISoL</strong> no es sólo las instalaciones y las charlas, 
+                        también es <strong>comunidad</strong>.
+                    </p>
+                    <p>
+                        Tradicionalmente luego del evento, todas y todos vamos a algún 
+                        bar a seguir la fiesta!!!
+                    </p>
+                    <p>
+                        En esta oportunidad nos juntaremos en Galpon Plaza, a solo dos cuadras de 
+                        donde se realizará FLISoL, Plaza 721. 
+                    </p>
+                    <div class="galpon-bar">
+                        <img src="https://gitlab.com/rlyehlab/flisol-landing/-/raw/eventol/public/assets/img/galpon-img-1.jpg" alt="logo del bar">
+                        <img src="https://gitlab.com/rlyehlab/flisol-landing/-/raw/eventol/public/assets/img/galpon-img-2.jpg" alt="una bebida blanca con rodajas de limón servido en copa de vidrio">
+                        <img src="https://gitlab.com/rlyehlab/flisol-landing/-/raw/eventol/public/assets/img/galpon-img-3.jpg" alt="cervecería con bancos de madera y gente comiendo o bebiendo">
+                    </div>
+                </div>
+            </div>        
+        </section> -->
+        <section id="links">
+            <div class="follow-us">
+                <a target="_blank" href="https://www.instagram.com/flisolcaba/"><i class="fa fa-instagram"></i></a>
+                <a target="_blank" href="https://www.facebook.com/flisol.caba"><i class="fa fa-facebook"></i></a>
+                <a target="_blank" href="https://twitter.com/FlisolCABA"><i class="fa fa-twitter"></i></a>
+                <a target="_blank" href="https://www.twitch.tv/flisolba"><i class="fa fa-twitch"></i></a>
+                <a target="_blank" href="https://www.youtube.com/channel/UCESsF4RUcjEG9VhJB2e5_zQ"><i
+                        class="fa fa-youtube"></i></a>
+                <a target="_blank" href="#"><img src="https://gitlab.com/rlyehlab/flisol-landing/-/raw/eventol/public/assets/img/discord-logo.svg" alt="discord"></a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p class="follow">2022 <i class="fa fa-linux"></i> Sígannos para más flisoles.</p>
+        <p class="follow" title="Hacemos Lo Que Podemos">..::: HLQP :::..</p>
+    </footer>
+       
+{% endblock %}
+
+{% block other-script %}
+    <script>
+        $(document).ready(function () {
+            window.libs.slick('slick_charlas');
+            window.libs.map({{ event.place|safe }});
+        });
+    </script>
+{% endblock %}
